@@ -1,0 +1,11 @@
+.category {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.category:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}

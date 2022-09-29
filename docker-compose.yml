@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  server:
+    env_file:
+      "./server/server.env"
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile 
+    image: ''
+    ports:
+      - "3001:3001"
+  client:
+    build:
+      context: ./client 
+      dockerfile: ./Dockerfile
+    image:
+    ports:
+      - "3000:3000"
+    links:
+      - "server:se"
